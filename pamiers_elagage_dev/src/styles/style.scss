@@ -4,17 +4,19 @@
 
 //available font weights: 100;300;400;500
 
+
+html {
+  scroll-behavior: smooth;
+}
 #hero {
   width: 100%;
   height: 100vh;
-  background-image: url('/src/imgs/hero.jpg');
-  background-color: rgb(192, 192, 192);
+  background-image: url('/compressed/hero1800-min.jpg');
+  background-color: $overlay;
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  //paralaxe
-  background-attachment: fixed;
 
   .container {
     display: flex;
@@ -32,9 +34,16 @@
       height: 2px;
     }
 
-    h3 {
+    #arrow{
+      display: block;
+      margin-top: 2rem;
+      //translate y on hover
+      transition: transform 0.3s ease-in-out;
+      &:hover {
+        transform: translateY(+5px);
+      }
     }
-    a {
+    .btn {
       font-size: 1rem;
       display: inline-block;
       padding: 1rem 2rem;
@@ -56,13 +65,13 @@
 }
 
 #services {
-  background-image: url('/src/imgs/services.jpg');
-  background-color: $overlay;
-  //background-blend-mode: multiply;
+  background-image: url('/compressed/services1800-min.jpg');
+
+  background-color: $overlay2;
+  background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
 color: $colorDark2;
   .section-title{
     color: $color;
@@ -84,10 +93,6 @@ color: $colorDark2;
         width: 100px;
         height: auto;
         object-fit: cover;
-
-        background-image: url('/src/imgs/hero.jpg');
-        background-size: cover;
-
         flex-shrink: 0;
       }
       .content{
@@ -113,7 +118,6 @@ section {
   padding: 5rem 0;
 }
 #about {
-  background-color: white;
   color: rgb(88, 88, 88);
 .container{
   display: flex;
@@ -141,14 +145,14 @@ img{
 
 }
 #contact {
-  background-image: url('/src/imgs/hero.jpg');
-  background-color: rgb(192, 192, 192);
+  background-image: url('/compressed/hero1800-min.jpg');
+
+  background-color: $overlay;
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  //paralaxe
-  background-attachment: fixed;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -180,7 +184,6 @@ img{
 }
 
 #mentions-legales{
-  background-color: rgb(255, 255, 255);
   color: black;
   h3{
     margin-top: 2rem;
